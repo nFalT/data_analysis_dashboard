@@ -9,7 +9,7 @@ selected_option = st.sidebar.selectbox('Choose a chart to display:', ['PM2.5 Mon
 
 @st.cache_data
 def load_data():
-    data = pd.read_csv('data\main_data.csv')
+    data = pd.read_csv('main_data.csv')
 
     data['No'] = pd.to_numeric(data['No'], errors='coerce').fillna(0).astype(int)
     
